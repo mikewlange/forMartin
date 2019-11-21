@@ -1,0 +1,1228 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Funny Talking Cats</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <script
+            src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"/>
+
+    <script
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Mr+Dafoe);
+        @import url(https://fonts.googleapis.com/css?family=Monoton);
+
+        body {
+            background: #000;
+            color: #fff;
+            position: relative;
+        }
+
+        .future-cop {
+            position: relative;
+            margin-top: 10px;
+        }
+
+
+        .cop {
+            position: relative;
+            font-family: 'Monoton', cursive;
+            font-size: 50px;
+            line-height: 1;
+            margin: 0;
+            margin-top: 45px;
+            padding-left: 80px;
+            /* font-weight: normal; */
+            background-image: -webkit-linear-gradient(#022486 0%, #0AD0FD 30%, #BDFCFC 40%, #D8FFFF 44%, #00081C 44%, #00081C 50%, #074A67 52%, #1CD8FE 60%, #7FEDFE 62%, #96F5FC 70%, #0FD8FA 73%, #0BD2FD 88%, #AFFDFF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 1px #fff;
+        }
+
+        .mac .cop {
+            font-weight: 400;
+        }
+
+        .cop:before {
+            position: absolute;
+            content: '';
+            left: 51px;
+            top: 74px;
+            width: 80px;
+            height: 3px;
+            background-image: -webkit-radial-gradient(#fff 0%, transparent 85%);
+            z-index: 4;
+            -webkit-animation-name: cop_before_effect;
+            -webkit-animation-duration: 5s;
+            -webkit-animation-delay: 2s;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-iteration-count: infinite;
+        }
+
+        .cop:after {
+            position: absolute;
+            content: '';
+            left: 90px;
+            top: 32px;
+            width: 3px;
+            height: 80px;
+            background-image: -webkit-radial-gradient(#fff 0%, transparent 85%);
+            z-index: 4;
+            -webkit-animation-name: cop_after_effect;
+            -webkit-animation-duration: 5s;
+            -webkit-animation-delay: 2s;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-iteration-count: infinite;
+        }
+
+        @-webkit-keyframes chrome_effect {
+            0% {
+                background-position: -680px 0;
+            }
+            10% {
+                background-position: 420px 0;
+            }
+            100% {
+                background-position: 420px 0;
+            }
+        }
+
+        @-webkit-keyframes cop_before_effect {
+            0% {
+                left: 51px;
+                top: 74px;
+                opacity: 0;
+            }
+
+            15% {
+                left: 51px;
+                top: 74px;
+                opacity: 1;
+            }
+
+            30% {
+                left: 51px;
+                top: 74px;
+                opacity: 0;
+            }
+
+            35% {
+                left: 370px;
+                top: 45px;
+                opacity: 0;
+            }
+
+            50% {
+                left: 370px;
+                top: 45px;
+                opacity: 1;
+            }
+
+            65% {
+                left: 370px;
+                top: 45px;
+                opacity: 0;
+            }
+
+            70% {
+                left: 564px;
+                top: 74px;
+                opacity: 0;
+            }
+
+            85% {
+                left: 564px;
+                top: 74px;
+                opacity: 1;
+            }
+
+            100% {
+                left: 564px;
+                top: 74px;
+                opacity: 0;
+            }
+        }
+
+        @-webkit-keyframes cop_after_effect {
+            0% {
+                left: 90px;
+                top: 32px;
+                opacity: 0;
+            }
+
+            15% {
+                left: 90px;
+                top: 32px;
+                opacity: 1;
+            }
+
+            30% {
+                left: 90px;
+                top: 32px;
+                opacity: 0;
+            }
+
+            35% {
+                left: 413px;
+                top: 11px;
+                opacity: 0;
+            }
+
+            50% {
+                left: 413px;
+                top: 11px;
+                opacity: 1;
+            }
+
+            65% {
+                left: 413px;
+                top: 11px;
+                opacity: 0;
+            }
+
+            70% {
+                left: 603px;
+                top: 32px;
+                opacity: 0;
+            }
+
+            85% {
+                left: 603px;
+                top: 32px;
+                opacity: 1;
+            }
+
+            100% {
+                left: 603px;
+                top: 32px;
+                opacity: 0;
+            }
+        }
+    </style>
+
+
+<style>
+    #search-modal {
+        top: 0;
+        margin-top: 3em !important;
+    }
+    #search-modal .actions {
+        border: none;
+    }
+    #search-modal .actions .cancel.button {
+        background: #f0f0f0;
+        position: absolute;
+        top: -1.35em;
+        right: -0.5em;
+        bottom: auto;
+        left: auto;
+        awidth: auto;
+        height: auto;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        z-index: 1;
+    }
+    #search-modal .actions .cancel.button div {
+        margin-top: 0.35em;
+    }
+    #search-modal .header {
+        padding: 2.5rem 2.25rem 0 2.25rem !important;
+        border: none;
+    }
+    #search-modal .header .container {
+        border-bottom: 1px solid rgba(34, 36, 38, 0.15);
+        padding-bottom: 0.5em;
+    }
+    #search-modal .content .result .content {
+        background: #eee;
+        padding: 0.4em;
+        margin: 0.3em;
+    }
+    #search-modal .content .result .content .description {
+        color: #333;
+    }
+    body {
+        background-color: #772f1a;
+        background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
+        border: 1px solid black;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        margin-right: 20px;
+        margin-left: 20px;
+        background-color: lightblue;
+    }
+    @page {
+        size: auto;   /* auto is the initial value */
+        margin: 10%;
+    }
+    .middle.grid {
+        height: 90%;
+    }
+
+    .container { width: 500px; text-align: center; margin: auto;}
+    .copyright { margin-top: 50px; font-size: 12px; text-transform: uppercase; }
+    .copyright a { text-decoration: none; padding: 5px;background: #c0392b; color: #FFFFFF; }
+    .copyright a:hover { background: transparent; color: #c0392b; }
+
+    .button {
+        display: inline-block;
+        height: 50px;
+        line-height: 50px;
+        padding-right: 30px;
+        padding-left: 70px;
+        position: relative;
+        background-color:rgb(41,127,184);
+        color:rgb(255,255,255);
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+
+
+        border-radius: 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        text-shadow:0px 1px 0px rgba(0,0,0,0.5);
+        -ms-filter:"progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ff123852,Positive=true)";zoom:1;
+        filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ff123852,Positive=true);
+
+        -moz-box-shadow:0px 2px 2px rgba(0,0,0,0.2);
+        -webkit-box-shadow:0px 2px 2px rgba(0,0,0,0.2);
+        box-shadow:0px 2px 2px rgba(0,0,0,0.2);
+        -ms-filter:"progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#33000000,Positive=true)";
+        filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#33000000,Positive=true);
+    }
+
+    .button span {
+        position: absolute;
+        left: 0;
+        width: 50px;
+        /*background-color:rgba(0,0,0,0.5);*/
+
+        -webkit-border-top-left-radius: 5px;
+        -webkit-border-bottom-left-radius: 5px;
+        -moz-border-radius-topleft: 5px;
+        -moz-border-radius-bottomleft: 5px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-right: 1px solid  rgba(0,0,0,0.15);
+    }
+
+    .button:hover span, .button.active span {
+        background-color:rgb(0,0,8);
+        border-right: 1px solid  rgba(0,22,33,0.3);
+    }
+
+    .button:active {
+        margin-top: 2px;
+        margin-bottom: 13px;
+
+        -moz-box-shadow:0px 1px 0px rgba(255,255,255,0.5);
+        -webkit-box-shadow:0px 1px 0px rgba(255,255,255,0.5);
+        box-shadow:0px 1px 0px rgba(255,255,255,0.5);
+        -ms-filter:"progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ccffffff,Positive=true)";
+        filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#000,Positive=true);
+    }
+
+    .button.orange {
+        background: #FF7F00;
+    }
+
+    .button.purple {
+        background: #8e44ad;
+    }
+
+    .button.turquoise {
+        background: #1abc9c;
+    }
+
+    .button.red {
+        background: #e74c3c;
+    }
+    @import url(https://fonts.googleapis.com/css?family=Mr+Dafoe);
+    @import url(https://fonts.googleapis.com/css?family=Titillium+Web:900);
+    @import url(https://fonts.googleapis.com/css?family=Righteous);
+    @import url(https://fonts.googleapis.com/css?family=Candal);
+
+    @import url(https://fonts.googleapis.com/css?family=Permanent+Marker);
+
+    @import url(https://fonts.googleapis.com/css?family=Monoton);
+
+
+    body { background: #000; color: #fff; position: relative;}
+
+    .chrome {
+        position: relative;
+        background-image: -webkit-linear-gradient(#378DBC 0%, #B6E8F1 46%, #ffffff 50%, #32120E 54%, #FFC488 58%, #582C11 90%, #EC9B4E 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 4px #f5f5f5;
+        font-size: 200px;
+        font-family: 'Titillium Web', sans-serif;
+        font-style: italic;
+        margin: 0;
+        line-height: 1;
+    }
+
+    .chrome:before {
+        content: 'CHROME';
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 10;
+        background-image: -webkit-linear-gradient(-40deg, transparent 0%, transparent 40%, #fff 50%, transparent 60%, transparent 100%);
+        background-position:-680px 0;
+        -webkit-background-clip: text;
+        -webkit-text-stroke: 0;
+        padding-right: 300px;
+        -webkit-animation-name: chrome_effect;
+        -webkit-animation-duration: 6s;
+        -webkit-animation-delay: 2s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+    }
+
+    .dreams {
+        position: absolute;
+        margin: 0px;
+        font-family: 'Mr Dafoe', cursive;
+        font-size: 160px;
+        color: #F975F7 ;
+        transform:rotate(-15deg);
+        -ms-transform:rotate(-15deg); /* IE 9 */
+        -webkit-transform:rotate(-15deg); /* Safari and Chrome */
+        margin-left: 400px;
+        margin-top: -120px;
+        -webkit-text-stroke: 1px #f008b7;
+        -webkit-filter: drop-shadow(2px 2px 20px #f008b7);
+        z-index: 20;
+    }
+
+    .windows .dreams {
+        -webkit-text-stroke: 4px #f008b7;
+    }
+
+    .vectro {
+        position: relative;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 0.1px #f1f1f1;
+        font-family: 'Righteous', cursive;
+        font-size: 100px;
+        margin: 20px 0 50px 0;
+        text-align: center;
+    }
+
+    .vectro:after {
+        content: '';
+        position: absolute;
+        left: 30%;
+        top: 20%;
+        width: 100%;
+        height: 100%;
+        /*-webkit-animation:vectro_effect 0.067s infinite;*/
+        /*//background: repeating-linear-gradient(0deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px, rgba(255,255,255,0) 1px, rgba(255,255,255,0) 2px);*/
+    }
+
+
+
+    .windows .vectro {
+        -webkit-text-stroke: 4px #f1f1f1;
+    }
+
+    .vectro-body {
+        -webkit-background-clip: text;
+        background-image: -webkit-linear-gradient(#C3BFB4 0%, #FDFCFA 50%, #E8E7E5 51%, #757172 52%, #E8E9DB 100%);
+        -webkit-filter: drop-shadow(2px 2px 15px #3F59F4);
+    }
+
+    .vectro-red {
+        color: #F10C20;
+        -webkit-text-fill-color: #F10C20;
+        -webkit-text-stroke: 0;
+        -webkit-filter: drop-shadow(2px 2px 15px #F10C20);
+        font-style: italic;
+        padding-right: 20px;
+    }
+
+    .windows .vectro-red {
+        padding-right: 30px;
+    }
+
+    .vectro-green {
+        color: #6BFF2B;
+        -webkit-text-fill-color: #6BFF2B;
+        -webkit-filter: drop-shadow(2px 2px 15px #6BFF2B);
+        -webkit-text-stroke: 0;
+        font-style: italic;
+        padding-right: 20px;
+        margin-left: -20px;
+    }
+
+    .windows .vectro-green {
+        padding-right: 30px;
+        margin-left: -30px;
+    }
+
+    .vectro-blue {
+        color: #3F59F4;
+        -webkit-text-fill-color: #3F59F4;
+        -webkit-filter: drop-shadow(2px 2px 15px #3F59F4);
+        -webkit-text-stroke: 0;
+        font-style: italic;
+        padding-right: 20px;
+        margin-left: -20px;
+    }
+
+    .windows .vectro-blue {
+        padding-right: 30px;
+        margin-left: -30px;
+    }
+
+    .street-machine {
+        position: relative;
+    }
+
+    .street {
+        position: relative;
+        font-family: 'Candal', sans-serif;
+        font-size: 180px;
+        font-style: italic;
+        -webkit-text-stroke: 0.1px #ed2121;
+        color: #fff;
+        text-shadow: -10px 10px 0px #ed2121;
+        margin: 0;
+    }
+
+    .windows .street {
+        -webkit-text-stroke: 4px #ed2121;
+    }
+
+    .street:before {
+        content: '';
+        position: absolute;
+        height: 4px;
+        width: 665px;
+        top: 83px;
+        left: 48px;
+        background: #ed2121;
+        box-shadow: -8px 13px #ed2121;
+    }
+
+    .windows .street:before {
+        left: 55px;
+        width: 659px;
+    }
+
+    .street:after {
+        content: '';
+        position: absolute;
+        height: 4px;
+        width: 639px;
+        top: 109px;
+        left: 36px;
+        background: #ed2121;
+        box-shadow: -4px 13px #ed2121;
+    }
+
+    .machine {
+        position: absolute;
+        left: 50px;
+        top: 350px;
+        font-family: 'Mr Dafoe', cursive;
+        font-size: 130px;
+        transform:rotate(-15deg);
+        -ms-transform:rotate(-15deg); /* IE 9 */
+        -webkit-transform:rotate(-15deg); /* Safari and Chrome */
+        color: #ed2121;
+        margin: 0;
+        margin-top: -160px;
+        padding-left: 430px;
+        text-shadow: 1px 2px 0px #F9D2D2;
+    }
+
+    .windows .machine {
+        margin-top: -200px;
+    }
+
+    .victory {
+        position: relative;
+        font-family: 'Permanent Marker', cursive;
+        font-variant:small-caps;
+        font-size: 180px;
+        -webkit-transform: skew(-15deg,-15deg);
+        padding-left: 80px;
+        background-image: -webkit-linear-gradient(#FF0FF8 0%,  #F9F9F7 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin: 0;
+        -webkit-filter: drop-shadow(2px 2px 20px #f008b7);
+    }
+
+    .victory:before {
+        content: '-';
+        position: absolute;
+        bottom: -98px;
+        left: 254px;
+        background-image: -webkit-linear-gradient(#F3C8F3 0%, #F3C8F3 100%);
+        -webkit-background-clip: text;
+        text-shadow: 70px -7px #F3C8F3;
+    }
+
+    .victory:after {
+        content: '-';
+        position: absolute;
+        bottom: -85px;
+        left: 395px;
+        background-image: -webkit-linear-gradient(#F3C8F3 0%, #F3C8F3 100%);
+        -webkit-background-clip: text;
+        text-shadow: 70px -5px #F3C8F3;
+    }
+
+    .victory-v {
+        position: relative;
+        background-image: -webkit-linear-gradient(#FF0FF8 0%,  #F9F9F7 100%);
+        -webkit-background-clip: text;
+        padding-right: 18px;
+        margin-right: -18px;
+    }
+
+    .victory-v:before {
+        content: '-';
+        position: absolute;
+        top: -71px;
+        left: -71px;
+        background-image: -webkit-linear-gradient(#FF0FF8 0%,  #FC96FC 100%);
+        -webkit-background-clip: text;
+    }
+
+    .victory-v:after {
+        content: '-';
+        position: absolute;
+        top: -72px;
+        left: 103px;
+        background-image: -webkit-linear-gradient(#FF0FF8 0%,  #FC96FC 100%);
+        -webkit-background-clip: text;
+    }
+
+    .future-cop {
+        position: relative;
+        margin-top: 500px;
+    }
+
+    .future {
+        position: absolute;
+        left: 0;
+        top: -310px;
+        font-family: 'Mr Dafoe', cursive;
+        font-size: 200px;
+        margin-top: 160px;
+        margin-bottom: 0;
+        color: #EB219B;
+        -webkit-text-fill-color: rgba(253, 90, 250, 1);
+        text-shadow: -2px -2px 0 #FFBAF2;
+        -webkit-filter: drop-shadow(3px 3px 1px #441F62);
+        -webkit-transform: skew(-5deg,-5deg);
+        font-weight: normal;
+        z-index: 2;
+        margin-left: 60px;
+        padding-left: 50px;
+        padding-right: 70px;
+    }
+
+    .cop {
+        position: relative;
+        font-family: 'Monoton', cursive;
+        font-size: 200px;
+        line-height: 1;
+        margin: 0;
+        margin-top: -95px;
+        padding-left: 80px;
+        /* font-weight: normal; */
+        background-image: -webkit-linear-gradient(#022486 0%, #0AD0FD 30%, #BDFCFC 40%, #D8FFFF 44%, #00081C 44%, #00081C 50%, #074A67 52%, #1CD8FE 60%, #7FEDFE 62%, #96F5FC 70%, #0FD8FA 73%, #0BD2FD 88%, #AFFDFF 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 1px #fff;
+    }
+
+    .mac .cop {
+        font-weight: 400;
+    }
+
+    .cop:before {
+        position: absolute;
+        content: '';
+        left: 51px;
+        top: 74px;
+        width: 80px;
+        height: 3px;
+        background-image: -webkit-radial-gradient(#fff 0%, transparent 85%);
+        z-index: 4;
+        -webkit-animation-name: cop_before_effect;
+        -webkit-animation-duration: 5s;
+        -webkit-animation-delay: 2s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+    }
+
+    .cop:after {
+        position: absolute;
+        content: '';
+        left: 90px;
+        top: 32px;
+        width: 3px;
+        height: 80px;
+        background-image: -webkit-radial-gradient(#fff 0%, transparent 85%);
+        z-index: 4;
+        -webkit-animation-name: cop_after_effect;
+        -webkit-animation-duration: 5s;
+        -webkit-animation-delay: 2s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+    }
+
+    @-webkit-keyframes chrome_effect {
+        0% {background-position:-680px 0;}
+        10% {background-position:420px 0;}
+        100% {background-position:420px 0;}
+    }
+
+    @-webkit-keyframes cop_before_effect {
+        0% {
+            left: 51px;
+            top: 74px;
+            opacity: 0;}
+
+        15% {
+            left: 51px;
+            top: 74px;
+            opacity: 1;}
+
+        30% {
+            left: 51px;
+            top: 74px;
+            opacity: 0;}
+
+        35% {
+            left: 370px;
+            top: 45px;
+            opacity: 0;}
+
+        50% {
+            left: 370px;
+            top: 45px;
+            opacity: 1;}
+
+        65% {
+            left: 370px;
+            top: 45px;
+            opacity: 0;}
+
+        70% {
+            left: 564px;
+            top: 74px;
+            opacity: 0;}
+
+        85% {
+            left: 564px;
+            top: 74px;
+            opacity: 1;}
+
+        100% {
+            left: 564px;
+            top: 74px;
+            opacity: 0;}
+    }
+
+    @-webkit-keyframes cop_after_effect {
+        0% {
+            left: 90px;
+            top: 32px;
+            opacity: 0;}
+
+        15% {
+            left: 90px;
+            top: 32px;
+            opacity: 1;}
+
+        30% {
+            left: 90px;
+            top: 32px;
+            opacity: 0;}
+
+        35% {
+            left: 413px;
+            top: 11px;
+            opacity: 0;}
+
+        50% {
+            left: 413px;
+            top: 11px;
+            opacity: 1;}
+
+        65% {
+            left: 413px;
+            top: 11px;
+            opacity: 0;}
+
+        70% {
+            left: 603px;
+            top: 32px;
+            opacity: 0;}
+
+        85% {
+            left: 603px;
+            top: 32px;
+            opacity: 1;}
+
+        100% {
+            left: 603px;
+            top: 32px;
+            opacity: 0;}
+    }
+
+
+
+
+</style>
+    <script>
+        const signs = document.querySelectorAll('x-sign')
+        const randomIn = (min, max) => (
+            Math.floor(Math.random() * (max - min + 1) + min)
+        );
+
+        const mixupInterval = el => {
+            const ms = randomIn(2000, 4000)
+            el.style.setProperty('--interval', `${ms}ms`)
+        };
+
+        signs.forEach(el => {
+            mixupInterval(el)
+            el.addEventListener('webkitAnimationIteration', () => {
+                mixupInterval(el)
+            })
+        })
+    </script>
+    <script>
+        if (navigator.platform.indexOf('Win') != -1) {
+            window.document.getElementById("wrapper").setAttribute("class", "windows");
+        } else if (navigator.platform.indexOf('Mac') != -1) {
+            window.document.getElementById("wrapper").setAttribute("class", "mac");
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<script>
+  theanimals=  [
+        {
+            animal: 'Alligator',
+            sound: 'bellow'
+        },
+        {
+            animal: 'Antelope',
+            sound: 'snort'
+        },
+        {
+            animal: 'Badgers',
+            sound: 'growl'
+        },
+        {
+            animal: 'Bats',
+            sound: 'screech'
+        },
+        {
+            animal: '.bear.the.lion',
+            sound: 'growl'
+        },
+        {
+            animal: 'Bees',
+            sound: 'buzz'
+        },
+        {
+            animal: 'Bitterns',
+            sound: 'boom'
+        },
+        {
+            animal: 'Calves',
+            sound: 'mooohh'
+        },
+        {
+            animal: '.Housecat.the.Cheetah',
+            sound: 'meow'
+        },
+        {
+            animal: 'Chickens',
+            sound: 'cluck'
+        },
+        {
+            animal: 'Chinchillas',
+            sound: 'squeak'
+        },
+        {
+            animal: 'Cicadas',
+            sound: 'chirp'
+        },
+        {
+            animal: 'cow',
+            sound: 'shazoom'
+        },
+        {
+            animal: 'Crickets',
+            sound: 'chirp'
+        },
+        {
+            animal: 'Crows',
+            sound: 'cah'
+        },
+        {
+            animal: 'Curlews',
+            sound: 'pipe'
+        },
+        {
+            animal: '.lion.the.Dog',
+            sound: 'ruff'
+        },
+        {
+            animal: 'Dolphins',
+            sound: 'click'
+        },
+        {
+            animal: 'Ducks',
+            sound: 'quack'
+        },
+        {
+            animal: 'Eagles',
+            sound: 'im bald'
+        },
+        {
+            animal: 'Elephants',
+            sound: 'thwamp'
+        },
+        {
+            animal: 'Ferrets',
+            sound: 'dook'
+        },
+        {
+            animal: 'Frogs',
+            sound: 'ribbit'
+        },
+        {
+            animal: 'Giraffes',
+            sound: 'bleat'
+        },
+        {
+            animal: 'Geese',
+            sound: 'honk'
+        },
+        {
+            animal: 'Grasshoppers',
+            sound: 'chirp'
+        },
+        {
+            animal: 'Guinea pigs',
+            sound: 'squeak'
+        },
+        {
+            animal: 'Hamsters',
+            sound: 'squeak'
+        },
+        {
+            animal: 'Hermit crabs',
+            sound: 'chirp'
+        },
+        {
+            animal: 'Horses',
+            sound: 'neigh'
+        },
+        {
+            animal: 'Hippopotamuses',
+            sound: 'growl'
+        },
+        {
+            animal: 'Magpies',
+            sound: 'chatter'
+        },
+        {
+            animal: 'Mice',
+            sound: 'mouse'
+        },
+        {
+            animal: 'Monkeys',
+            sound: 'chatter'
+        },
+        {
+            animal: 'Moose',
+            sound: 'bellow'
+        },
+        {
+            animal: 'Mosquitos',
+            sound: 'buzz'
+        },
+        {
+            animal: 'Okapis',
+            sound: 'cough'
+        },
+        {
+            animal: 'Oxen',
+            sound: 'moo'
+        },
+        {
+            animal: 'Owls',
+            sound: 'whom'
+        },
+        {
+            animal: 'Parrots',
+            sound: 'hello'
+        },
+        {
+            animal: 'Pigs',
+            sound: 'oink'
+        },
+        {
+            animal: 'Prairie dogs',
+            sound: 'bark'
+        },
+        {
+            animal: 'Raccoons',
+            sound: 'trill'
+        },
+        {
+            animal: 'Ravens',
+            sound: 'caw'
+        },
+        {
+            animal: 'Rhinoceroses',
+            sound: 'bellow'
+        },
+        {
+            animal: 'Rooks',
+            sound: 'caw'
+        },
+        {
+            animal: 'Seals',
+            sound: 'bark'
+        },
+        {
+            animal: '.snake.the.elephant',
+            sound: 'hiss'
+        },
+        {
+            animal: 'squirrrl',
+            sound: 'acorns'
+        },
+        {
+            animal: 'Tapirs',
+            sound: 'squeak'
+        },
+        {
+            animal: 'Tarantulas',
+            sound: 'hiss'
+        },
+        {
+            animal: 'Tokay geckos',
+            sound: 'croak'
+        },
+        {
+            animal: 'Turkeys',
+            sound: 'gobble'
+        },
+        {
+            animal: 'Vultures',
+            sound: 'scream'
+        },
+        {
+            animal: 'Walruses',
+            sound: 'groan'
+        },
+        {
+            animal: 'Whales',
+            sound: 'sing'
+        },
+        {
+            animal: '.squirrel.the.zebra',
+            sound: 'bark'
+        }];
+    function Speak(name) {
+        // First lists Tokenize the textarea. Let's use regex to be precise
+        var inputstringTokens = $.trim($("textarea").val()).match(/\S+/g);
+        // We have to remove the quotes in a non hacky way
+        // Since we're to read this. Let's build a ctring the old fashiond way.
+        talk = "";
+        theanimals.forEach(function (arrayItem) {
+           if(arrayItem.animal === name){
+              // processesReturn(arrayItem.sound)
+               inputstringTokens.forEach(function (strng, index) {
+                   console.log(strng);
+                   console.log(arrayItem.sound);
+                   talk += " " + strng + " " + arrayItem.sound;
+               });
+           }
+        });
+       alert(talk);
+    }
+</script>
+
+
+<body>
+<x-sign style="font-size: 36px">
+    Snake and Squirrel's Excellent Adventure
+</x-sign>
+<div class="ui three column grid">
+
+
+    <div class="column">
+        <a class=".snake.the.elephant" onclick="Speak('.snake.the.elephant');">
+            <div class="ui fluid card">
+                <div class="image">
+                    <img src="../public/images/ele.png">
+                </div>
+                <div class="content">
+                    <a class="header">Snake</a>
+                </div>
+            </div>
+        </a>
+    </div>
+
+
+    <div class="column">
+        <div class="ui fluid card">
+            <div class="image">
+            </div>
+
+            <div class="content">
+
+
+                <div class="ui form">
+                    <div class="field" style="search-modal">
+                        <label style="align-content: center"> Make a wish and type it in the box below. Then choose your favorite dog below and say "(name).Speak" while also
+                            clicking on it. Choose wisely and be rewarded. Choose poorly and, well the same. Same answer.
+                        </label>
+                        <textarea style=" border: 2px solid lime;" rows="8" class="input"></textarea>
+                    </div>
+                    <div class="field" style="font-size: 10px; color: black">
+                        Snake the Elephant and Squirrel the Zebra do Standup in La. Housecat the Cheetah, Bear The Lion
+                        and Dog the Cat
+                        became motivational speakers after they ate Tony Robbins. The other 5 are just nice cats who don't care too much for stand up. This group were called "the Nine" way before some movie spoiled it for them. Which is why they took up public speaking, but then eat the people right after.
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="column">
+        <a class=".squirrel.the.zebra" onclick="Speak('.squirrel.the.zebra');">
+            <div class="ui fluid card">
+                <div class="image">
+                    <img src="../public/images/zeb.png">
+                </div>
+                <div class="content">
+                    <a class="header">Squirrel</a>
+                </div>
+            </div>
+        </a>
+    </div>
+
+</div>
+
+<div class="ui three column grid">
+
+    <div class="column">
+        <a class=".Housecat.the.Cheetah" onclick="Speak('.Housecat.the.Cheetah');">
+        <div class="ui fluid card">
+            <div class="image">
+                <img style="width: 383px;height:285px" src="https://images.pexels.com/photos/789574/pexels-photo-789574.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                     alt="cheetah close-up">
+
+            </div>
+            <div class="content">
+                <a class="header">Housecat</a>
+            </div>
+        </div>
+        </a>
+    </div>
+
+    <div class="column">
+        <a class=".bear.the.lion" onclick="Speak('.bear.the.lion');">
+        <div class="ui fluid card">
+            <div class="image">
+                <img style="width: 383px;height:285px" src="https://images.pexels.com/photos/792601/pexels-photo-792601.jpeg?cs=srgb&dl=angry-animal-animal-photography-792601.jpg&fm=jpg"
+                     alt="syberian tiger">
+
+            </div>
+            <div class="content">
+                <a class="header">Bear</a>
+            </div>
+        </div>
+        </a>
+    </div>
+    <div class="column">
+        <a class=".lion.the.Dog" onclick="Speak('.lion.the.Dog');">
+        <div class="ui fluid card">
+            <div class="image">
+                <img  style="width: 383px;height:285px" src="https://images.pexels.com/photos/1926334/pexels-photo-1926334.jpeg?cs=srgb&dl=animal-animal-photography-big-cat-1926334.jpg">
+
+            </div>
+            <div class="content">
+                <a class="header">Dog Dog Dog</a>
+            </div>
+        </div>
+        </a>
+    </div>
+</div>
+
+
+<div class="ui four cards">
+    <a class="red card" onclick="Speak('cow');">
+        <div class="image">
+            <img src="https://images.pexels.com/photos/1926334/pexels-photo-1926334.jpeg?cs=srgb&dl=animal-animal-photography-big-cat-1926334.jpg"
+                 alt="sleeping puma">
+
+        </div>
+    </a>
+    <a class="orange card" onclick="Speak('Turkeys');">
+        <div class="image">
+            <img src="https://images.pexels.com/photos/459169/pexels-photo-459169.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                 alt="leopard">
+
+        </div>
+    </a>
+    <a class="yellow card" onclick="Speak('Ravens');">
+        <div class="image">
+            <img src="https://images.pexels.com/photos/41178/africa-animal-big-carnivore-41178.jpeg?cs=srgb&dl=africa-animals-big-cat-41178.jpg&fm=jpg"
+                 alt="two female lions">
+
+        </div>
+    </a>
+    <a class="olive card" onclick="Speak('Pigs');">
+        <div class="image">
+            <img src="https://images.pexels.com/photos/162306/tiger-nature-zoo-wild-162306.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                 alt="tiger hiding in bushes">
+
+        </div>
+    </a>
+
+</div>
+
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js'></script>
+</body>
+
+</html>
+
